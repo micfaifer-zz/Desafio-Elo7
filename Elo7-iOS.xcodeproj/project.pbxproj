@@ -1,0 +1,606 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		95D58CC3215004CD00FC5033 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D58CC2215004CD00FC5033 /* AppDelegate.swift */; };
+		95D58CC5215004CD00FC5033 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D58CC4215004CD00FC5033 /* ViewController.swift */; };
+		95D58CC8215004CD00FC5033 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95D58CC6215004CD00FC5033 /* Main.storyboard */; };
+		95D58CCB215004CE00FC5033 /* Elo7_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 95D58CC9215004CD00FC5033 /* Elo7_iOS.xcdatamodeld */; };
+		95D58CCD215004D000FC5033 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95D58CCC215004D000FC5033 /* Assets.xcassets */; };
+		95D58CD0215004D000FC5033 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95D58CCE215004D000FC5033 /* LaunchScreen.storyboard */; };
+		95D58CDB215004D000FC5033 /* Elo7_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D58CDA215004D000FC5033 /* Elo7_iOSTests.swift */; };
+		95D58CE6215004D000FC5033 /* Elo7_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D58CE5215004D000FC5033 /* Elo7_iOSUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		95D58CD7215004D000FC5033 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 95D58CB7215004CD00FC5033 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 95D58CBE215004CD00FC5033;
+			remoteInfo = "Elo7-iOS";
+		};
+		95D58CE2215004D000FC5033 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 95D58CB7215004CD00FC5033 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 95D58CBE215004CD00FC5033;
+			remoteInfo = "Elo7-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		95D58CBF215004CD00FC5033 /* Elo7-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Elo7-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		95D58CC2215004CD00FC5033 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		95D58CC4215004CD00FC5033 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		95D58CC7215004CD00FC5033 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		95D58CCA215004CD00FC5033 /* Elo7_iOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Elo7_iOS.xcdatamodel; sourceTree = "<group>"; };
+		95D58CCC215004D000FC5033 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		95D58CCF215004D000FC5033 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		95D58CD1215004D000FC5033 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95D58CD6215004D000FC5033 /* Elo7-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Elo7-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		95D58CDA215004D000FC5033 /* Elo7_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elo7_iOSTests.swift; sourceTree = "<group>"; };
+		95D58CDC215004D000FC5033 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95D58CE1215004D000FC5033 /* Elo7-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Elo7-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		95D58CE5215004D000FC5033 /* Elo7_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elo7_iOSUITests.swift; sourceTree = "<group>"; };
+		95D58CE7215004D000FC5033 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		95D58CBC215004CD00FC5033 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95D58CD3215004D000FC5033 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95D58CDE215004D000FC5033 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		95D58CB6215004CD00FC5033 = {
+			isa = PBXGroup;
+			children = (
+				95D58CC1215004CD00FC5033 /* Elo7-iOS */,
+				95D58CD9215004D000FC5033 /* Elo7-iOSTests */,
+				95D58CE4215004D000FC5033 /* Elo7-iOSUITests */,
+				95D58CC0215004CD00FC5033 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		95D58CC0215004CD00FC5033 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				95D58CBF215004CD00FC5033 /* Elo7-iOS.app */,
+				95D58CD6215004D000FC5033 /* Elo7-iOSTests.xctest */,
+				95D58CE1215004D000FC5033 /* Elo7-iOSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		95D58CC1215004CD00FC5033 /* Elo7-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				95D58CC2215004CD00FC5033 /* AppDelegate.swift */,
+				95D58CC4215004CD00FC5033 /* ViewController.swift */,
+				95D58CC6215004CD00FC5033 /* Main.storyboard */,
+				95D58CCC215004D000FC5033 /* Assets.xcassets */,
+				95D58CCE215004D000FC5033 /* LaunchScreen.storyboard */,
+				95D58CD1215004D000FC5033 /* Info.plist */,
+				95D58CC9215004CD00FC5033 /* Elo7_iOS.xcdatamodeld */,
+			);
+			path = "Elo7-iOS";
+			sourceTree = "<group>";
+		};
+		95D58CD9215004D000FC5033 /* Elo7-iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				95D58CDA215004D000FC5033 /* Elo7_iOSTests.swift */,
+				95D58CDC215004D000FC5033 /* Info.plist */,
+			);
+			path = "Elo7-iOSTests";
+			sourceTree = "<group>";
+		};
+		95D58CE4215004D000FC5033 /* Elo7-iOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				95D58CE5215004D000FC5033 /* Elo7_iOSUITests.swift */,
+				95D58CE7215004D000FC5033 /* Info.plist */,
+			);
+			path = "Elo7-iOSUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		95D58CBE215004CD00FC5033 /* Elo7-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95D58CEA215004D000FC5033 /* Build configuration list for PBXNativeTarget "Elo7-iOS" */;
+			buildPhases = (
+				95D58CBB215004CD00FC5033 /* Sources */,
+				95D58CBC215004CD00FC5033 /* Frameworks */,
+				95D58CBD215004CD00FC5033 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Elo7-iOS";
+			productName = "Elo7-iOS";
+			productReference = 95D58CBF215004CD00FC5033 /* Elo7-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		95D58CD5215004D000FC5033 /* Elo7-iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95D58CED215004D000FC5033 /* Build configuration list for PBXNativeTarget "Elo7-iOSTests" */;
+			buildPhases = (
+				95D58CD2215004D000FC5033 /* Sources */,
+				95D58CD3215004D000FC5033 /* Frameworks */,
+				95D58CD4215004D000FC5033 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				95D58CD8215004D000FC5033 /* PBXTargetDependency */,
+			);
+			name = "Elo7-iOSTests";
+			productName = "Elo7-iOSTests";
+			productReference = 95D58CD6215004D000FC5033 /* Elo7-iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		95D58CE0215004D000FC5033 /* Elo7-iOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95D58CF0215004D000FC5033 /* Build configuration list for PBXNativeTarget "Elo7-iOSUITests" */;
+			buildPhases = (
+				95D58CDD215004D000FC5033 /* Sources */,
+				95D58CDE215004D000FC5033 /* Frameworks */,
+				95D58CDF215004D000FC5033 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				95D58CE3215004D000FC5033 /* PBXTargetDependency */,
+			);
+			name = "Elo7-iOSUITests";
+			productName = "Elo7-iOSUITests";
+			productReference = 95D58CE1215004D000FC5033 /* Elo7-iOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		95D58CB7215004CD00FC5033 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = MicFaifer;
+				TargetAttributes = {
+					95D58CBE215004CD00FC5033 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					95D58CD5215004D000FC5033 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 95D58CBE215004CD00FC5033;
+					};
+					95D58CE0215004D000FC5033 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 95D58CBE215004CD00FC5033;
+					};
+				};
+			};
+			buildConfigurationList = 95D58CBA215004CD00FC5033 /* Build configuration list for PBXProject "Elo7-iOS" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 95D58CB6215004CD00FC5033;
+			productRefGroup = 95D58CC0215004CD00FC5033 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				95D58CBE215004CD00FC5033 /* Elo7-iOS */,
+				95D58CD5215004D000FC5033 /* Elo7-iOSTests */,
+				95D58CE0215004D000FC5033 /* Elo7-iOSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		95D58CBD215004CD00FC5033 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95D58CD0215004D000FC5033 /* LaunchScreen.storyboard in Resources */,
+				95D58CCD215004D000FC5033 /* Assets.xcassets in Resources */,
+				95D58CC8215004CD00FC5033 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95D58CD4215004D000FC5033 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95D58CDF215004D000FC5033 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		95D58CBB215004CD00FC5033 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95D58CC5215004CD00FC5033 /* ViewController.swift in Sources */,
+				95D58CCB215004CE00FC5033 /* Elo7_iOS.xcdatamodeld in Sources */,
+				95D58CC3215004CD00FC5033 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95D58CD2215004D000FC5033 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95D58CDB215004D000FC5033 /* Elo7_iOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95D58CDD215004D000FC5033 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95D58CE6215004D000FC5033 /* Elo7_iOSUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		95D58CD8215004D000FC5033 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 95D58CBE215004CD00FC5033 /* Elo7-iOS */;
+			targetProxy = 95D58CD7215004D000FC5033 /* PBXContainerItemProxy */;
+		};
+		95D58CE3215004D000FC5033 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 95D58CBE215004CD00FC5033 /* Elo7-iOS */;
+			targetProxy = 95D58CE2215004D000FC5033 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		95D58CC6215004CD00FC5033 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				95D58CC7215004CD00FC5033 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		95D58CCE215004D000FC5033 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				95D58CCF215004D000FC5033 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		95D58CE8215004D000FC5033 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		95D58CE9215004D000FC5033 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		95D58CEB215004D000FC5033 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "Elo7-iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.micfaifer.Elo7-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		95D58CEC215004D000FC5033 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "Elo7-iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.micfaifer.Elo7-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		95D58CEE215004D000FC5033 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8K997489FR;
+				INFOPLIST_FILE = "Elo7-iOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.micfaifer.Elo7-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Elo7-iOS.app/Elo7-iOS";
+			};
+			name = Debug;
+		};
+		95D58CEF215004D000FC5033 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8K997489FR;
+				INFOPLIST_FILE = "Elo7-iOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.micfaifer.Elo7-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Elo7-iOS.app/Elo7-iOS";
+			};
+			name = Release;
+		};
+		95D58CF1215004D000FC5033 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8K997489FR;
+				INFOPLIST_FILE = "Elo7-iOSUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.micfaifer.Elo7-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Elo7-iOS";
+			};
+			name = Debug;
+		};
+		95D58CF2215004D000FC5033 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8K997489FR;
+				INFOPLIST_FILE = "Elo7-iOSUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.micfaifer.Elo7-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Elo7-iOS";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		95D58CBA215004CD00FC5033 /* Build configuration list for PBXProject "Elo7-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95D58CE8215004D000FC5033 /* Debug */,
+				95D58CE9215004D000FC5033 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		95D58CEA215004D000FC5033 /* Build configuration list for PBXNativeTarget "Elo7-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95D58CEB215004D000FC5033 /* Debug */,
+				95D58CEC215004D000FC5033 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		95D58CED215004D000FC5033 /* Build configuration list for PBXNativeTarget "Elo7-iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95D58CEE215004D000FC5033 /* Debug */,
+				95D58CEF215004D000FC5033 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		95D58CF0215004D000FC5033 /* Build configuration list for PBXNativeTarget "Elo7-iOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95D58CF1215004D000FC5033 /* Debug */,
+				95D58CF2215004D000FC5033 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		95D58CC9215004CD00FC5033 /* Elo7_iOS.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				95D58CCA215004CD00FC5033 /* Elo7_iOS.xcdatamodel */,
+			);
+			currentVersion = 95D58CCA215004CD00FC5033 /* Elo7_iOS.xcdatamodel */;
+			path = Elo7_iOS.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 95D58CB7215004CD00FC5033 /* Project object */;
+}
