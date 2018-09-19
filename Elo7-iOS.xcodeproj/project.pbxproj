@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		9539772B2152866600DF981D /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9539772A2152866600DF981D /* DesignableTextField.swift */; };
+		9539772D2152B29200DF981D /* DepartmentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9539772C2152B29200DF981D /* DepartmentCollectionViewCell.swift */; };
+		953977352152D3B100DF981D /* ChooseDepTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953977342152D3B100DF981D /* ChooseDepTableViewCell.swift */; };
+		953977372152D3DD00DF981D /* DepsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953977362152D3DD00DF981D /* DepsTableViewCell.swift */; };
 		95D58CC3215004CD00FC5033 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D58CC2215004CD00FC5033 /* AppDelegate.swift */; };
 		95D58CC5215004CD00FC5033 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D58CC4215004CD00FC5033 /* ViewController.swift */; };
 		95D58CC8215004CD00FC5033 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95D58CC6215004CD00FC5033 /* Main.storyboard */; };
@@ -38,6 +41,9 @@
 
 /* Begin PBXFileReference section */
 		9539772A2152866600DF981D /* DesignableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableTextField.swift; sourceTree = "<group>"; };
+		9539772C2152B29200DF981D /* DepartmentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentCollectionViewCell.swift; sourceTree = "<group>"; };
+		953977342152D3B100DF981D /* ChooseDepTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseDepTableViewCell.swift; sourceTree = "<group>"; };
+		953977362152D3DD00DF981D /* DepsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepsTableViewCell.swift; sourceTree = "<group>"; };
 		95D58CBF215004CD00FC5033 /* Elo7-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Elo7-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95D58CC2215004CD00FC5033 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95D58CC4215004CD00FC5033 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,12 +112,15 @@
 				95D58CC2215004CD00FC5033 /* AppDelegate.swift */,
 				95D58CC4215004CD00FC5033 /* ViewController.swift */,
 				95D58CC6215004CD00FC5033 /* Main.storyboard */,
+				953977362152D3DD00DF981D /* DepsTableViewCell.swift */,
+				9539772C2152B29200DF981D /* DepartmentCollectionViewCell.swift */,
 				95D58CFF215161FC00FC5033 /* CareersTableViewController.swift */,
 				95D58CCC215004D000FC5033 /* Assets.xcassets */,
 				95D58CCE215004D000FC5033 /* LaunchScreen.storyboard */,
 				95D58CD1215004D000FC5033 /* Info.plist */,
 				95D58CC9215004CD00FC5033 /* Elo7_iOS.xcdatamodeld */,
 				9539772A2152866600DF981D /* DesignableTextField.swift */,
+				953977342152D3B100DF981D /* ChooseDepTableViewCell.swift */,
 			);
 			path = "Elo7-iOS";
 			sourceTree = "<group>";
@@ -265,6 +274,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9539772D2152B29200DF981D /* DepartmentCollectionViewCell.swift in Sources */,
+				953977372152D3DD00DF981D /* DepsTableViewCell.swift in Sources */,
+				953977352152D3B100DF981D /* ChooseDepTableViewCell.swift in Sources */,
 				95D58CC5215004CD00FC5033 /* ViewController.swift in Sources */,
 				95D58CCB215004CE00FC5033 /* Elo7_iOS.xcdatamodeld in Sources */,
 				9539772B2152866600DF981D /* DesignableTextField.swift in Sources */,
