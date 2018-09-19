@@ -25,9 +25,25 @@ class ChooseDepTableViewCell: UITableViewCell {
 
     func setupDepartmentTextField() {
         let dataPicker = UIPickerView()
+        let toolbar = UIToolbar()
         dataPicker.delegate = self
         dataPicker.dataSource = self
+
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(self.doneClick))
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(self.cancelClick))
+
+        toolbar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+        toolbar.sizeToFit()
+        depsTextField.inputAccessoryView = toolbar
         depsTextField.inputView = dataPicker
+    }
+
+    @objc func doneClick() {
+        depsTextField.resignFirstResponder()
+    }
+    @objc func cancelClick() {
+        depsTextField.resignFirstResponder()
     }
 }
 
