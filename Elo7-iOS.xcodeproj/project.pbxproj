@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9539772B2152866600DF981D /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9539772A2152866600DF981D /* DesignableTextField.swift */; };
 		95D58CC3215004CD00FC5033 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D58CC2215004CD00FC5033 /* AppDelegate.swift */; };
 		95D58CC5215004CD00FC5033 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D58CC4215004CD00FC5033 /* ViewController.swift */; };
 		95D58CC8215004CD00FC5033 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95D58CC6215004CD00FC5033 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 		95D58CD0215004D000FC5033 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95D58CCE215004D000FC5033 /* LaunchScreen.storyboard */; };
 		95D58CDB215004D000FC5033 /* Elo7_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D58CDA215004D000FC5033 /* Elo7_iOSTests.swift */; };
 		95D58CE6215004D000FC5033 /* Elo7_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D58CE5215004D000FC5033 /* Elo7_iOSUITests.swift */; };
+		95D58D00215161FC00FC5033 /* CareersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D58CFF215161FC00FC5033 /* CareersTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9539772A2152866600DF981D /* DesignableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableTextField.swift; sourceTree = "<group>"; };
 		95D58CBF215004CD00FC5033 /* Elo7-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Elo7-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95D58CC2215004CD00FC5033 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95D58CC4215004CD00FC5033 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +52,7 @@
 		95D58CE1215004D000FC5033 /* Elo7-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Elo7-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95D58CE5215004D000FC5033 /* Elo7_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elo7_iOSUITests.swift; sourceTree = "<group>"; };
 		95D58CE7215004D000FC5033 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95D58CFF215161FC00FC5033 /* CareersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareersTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,10 +106,12 @@
 				95D58CC2215004CD00FC5033 /* AppDelegate.swift */,
 				95D58CC4215004CD00FC5033 /* ViewController.swift */,
 				95D58CC6215004CD00FC5033 /* Main.storyboard */,
+				95D58CFF215161FC00FC5033 /* CareersTableViewController.swift */,
 				95D58CCC215004D000FC5033 /* Assets.xcassets */,
 				95D58CCE215004D000FC5033 /* LaunchScreen.storyboard */,
 				95D58CD1215004D000FC5033 /* Info.plist */,
 				95D58CC9215004CD00FC5033 /* Elo7_iOS.xcdatamodeld */,
+				9539772A2152866600DF981D /* DesignableTextField.swift */,
 			);
 			path = "Elo7-iOS";
 			sourceTree = "<group>";
@@ -261,6 +267,8 @@
 			files = (
 				95D58CC5215004CD00FC5033 /* ViewController.swift in Sources */,
 				95D58CCB215004CE00FC5033 /* Elo7_iOS.xcdatamodeld in Sources */,
+				9539772B2152866600DF981D /* DesignableTextField.swift in Sources */,
+				95D58D00215161FC00FC5033 /* CareersTableViewController.swift in Sources */,
 				95D58CC3215004CD00FC5033 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
