@@ -30,25 +30,38 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heroshot" translatesAutoresizingMaskIntoConstraints="NO" id="fiq-eB-G69">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="219"/>
                                                 </imageView>
-                                                <textField opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Escolha um departamento" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ua8-ZQ-ClO" customClass="DesignableUITextField" customModule="Elo7_iOS" customModuleProvider="target">
-                                                    <rect key="frame" x="74" y="94" width="227" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="image" keyPath="rightImage" value="arrow"/>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="rightPadding">
-                                                            <real key="value" value="10"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
-                                                </textField>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="3Nv-Rk-IWw">
+                                                    <rect key="frame" x="56.333333333333343" y="28" width="262.33333333333326" height="163"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="titulo" translatesAutoresizingMaskIntoConstraints="NO" id="cew-If-qcd">
+                                                            <rect key="frame" x="0.0" y="0.0" width="262.33333333333331" height="106"/>
+                                                        </imageView>
+                                                        <textField opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Escolha um departamento" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ua8-ZQ-ClO" customClass="DesignableUITextField" customModule="Elo7_iOS" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="128" width="262.33333333333331" height="35"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="35" id="F23-ya-YJP"/>
+                                                            </constraints>
+                                                            <color key="textColor" red="0.36078431372549019" green="0.32549019607843138" blue="0.31764705882352939" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="image" keyPath="rightImage" value="arrow"/>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="rightPadding">
+                                                                    <real key="value" value="10"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </textField>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="fiq-eB-G69" secondAttribute="trailing" id="1OR-dZ-6jb"/>
-                                                <constraint firstItem="fiq-eB-G69" firstAttribute="top" secondItem="4u0-3R-Ouq" secondAttribute="top" id="Eg7-Qf-AOV"/>
-                                                <constraint firstAttribute="bottom" secondItem="fiq-eB-G69" secondAttribute="bottom" id="oR7-7l-Jha"/>
-                                                <constraint firstItem="fiq-eB-G69" firstAttribute="leading" secondItem="4u0-3R-Ouq" secondAttribute="leading" id="rDK-OA-q4y"/>
+                                                <constraint firstItem="3Nv-Rk-IWw" firstAttribute="centerY" secondItem="4u0-3R-Ouq" secondAttribute="centerY" id="3SC-hg-JWZ"/>
+                                                <constraint firstItem="fiq-eB-G69" firstAttribute="top" secondItem="4u0-3R-Ouq" secondAttribute="top" id="4Do-IQ-fPi"/>
+                                                <constraint firstItem="3Nv-Rk-IWw" firstAttribute="width" secondItem="fiq-eB-G69" secondAttribute="width" multiplier="0.7" id="GDy-YM-eFh"/>
+                                                <constraint firstAttribute="bottom" secondItem="fiq-eB-G69" secondAttribute="bottom" id="Iti-kq-Mhv"/>
+                                                <constraint firstItem="fiq-eB-G69" firstAttribute="leading" secondItem="4u0-3R-Ouq" secondAttribute="leading" id="Wlp-Zq-1eo"/>
+                                                <constraint firstItem="3Nv-Rk-IWw" firstAttribute="centerX" secondItem="4u0-3R-Ouq" secondAttribute="centerX" id="d1s-ZS-rfb"/>
+                                                <constraint firstAttribute="trailing" secondItem="fiq-eB-G69" secondAttribute="trailing" id="lKy-qg-gLc"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -63,17 +76,21 @@
                     <navigationItem key="navigationItem" id="NTb-30-uxo">
                         <barButtonItem key="leftBarButtonItem" title="Logo" id="pGL-bE-Z2s"/>
                         <rightBarButtonItems>
-                            <barButtonItem title="Eventos" id="QsJ-3v-AA9"/>
-                            <barButtonItem title="Engenharia" id="J8F-yH-K3y"/>
+                            <barButtonItem title="Eventos" id="QsJ-3v-AA9">
+                                <color key="tintColor" red="0.14509803921568629" green="0.61176470588235299" blue="0.60784313725490191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </barButtonItem>
+                            <barButtonItem title="Engenharia" id="J8F-yH-K3y">
+                                <color key="tintColor" red="0.14509803921568629" green="0.61176470588235299" blue="0.60784313725490191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
-                        <outlet property="areasTextField" destination="Ua8-ZQ-ClO" id="K7n-MS-2p3"/>
+                        <outlet property="departmentTextField" destination="Ua8-ZQ-ClO" id="K7n-MS-2p3"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qyp-zi-NgJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="429.60000000000002" y="-142.57871064467767"/>
+            <point key="canvasLocation" x="429.60000000000002" y="-142.61083743842366"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7cq-cN-cvF">
@@ -97,5 +114,6 @@
     <resources>
         <image name="arrow" width="20" height="12"/>
         <image name="heroshot" width="640" height="500"/>
+        <image name="titulo" width="341" height="106"/>
     </resources>
 </document>
