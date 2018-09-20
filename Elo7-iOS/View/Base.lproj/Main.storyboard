@@ -14,7 +14,7 @@
             <objects>
                 <tableViewController id="XtG-hp-YdQ" customClass="CareersTableViewController" customModule="Elo7_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="sqG-j0-NCr">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
@@ -70,8 +70,97 @@
                                     <outlet property="depsTextField" destination="Ua8-ZQ-ClO" id="pC0-UR-ApR"/>
                                 </connections>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="321" id="Jbu-gA-eFi">
+                                <rect key="frame" x="0.0" y="228" width="375" height="321"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Jbu-gA-eFi" id="uLU-1P-Jem">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="321"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Wha-Nc-EaY">
+                                            <rect key="frame" x="10" y="5" width="355" height="66"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nossa Cultura" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SZh-HX-n9g">
+                                                    <rect key="frame" x="0.0" y="0.0" width="355" height="20.333333333333332"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Somos orientados pela satisfação e fidelização de nossos clientes" textAlignment="center" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W3S-9M-sjf">
+                                                    <rect key="frame" x="0.0" y="25.333333333333332" width="355" height="40.666666666666671"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZoN-SX-eCk">
+                                            <rect key="frame" x="16" y="81" width="343" height="229"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uuw-go-hGb">
+                                                <size key="itemSize" width="270" height="208"/>
+                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            </collectionViewFlowLayout>
+                                            <cells>
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="QwU-GC-9OQ">
+                                                    <rect key="frame" x="36.666666666666664" y="0.0" width="270" height="208"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                        <rect key="frame" x="0.0" y="0.0" width="270" height="208"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="criatividade" translatesAutoresizingMaskIntoConstraints="NO" id="4nb-oD-Cn8">
+                                                                <rect key="frame" x="90" y="25.666666666666664" width="90" height="73.333333333333343"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="4nb-oD-Cn8" secondAttribute="height" multiplier="109:89" id="yJg-QM-yj3"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="GL6-A0-adV">
+                                                                <rect key="frame" x="16" y="114" width="238" height="77.666666666666686"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Criatividade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nKg-Kn-vDI">
+                                                                        <rect key="frame" x="75.666666666666657" y="0.0" width="86.666666666666657" height="19.333333333333332"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Estimulamos a intervenção humana como algo insubstituível. Nosso ambiente é inspirador" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fpc-XM-Y66">
+                                                                        <rect key="frame" x="3.3333333333333286" y="27.333333333333346" width="231.66666666666669" height="50.333333333333343"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </view>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="GL6-A0-adV" secondAttribute="trailing" id="9fq-Db-dG1"/>
+                                                        <constraint firstItem="4nb-oD-Cn8" firstAttribute="width" secondItem="QwU-GC-9OQ" secondAttribute="width" multiplier="10:30" id="EEd-24-3VP"/>
+                                                        <constraint firstItem="GL6-A0-adV" firstAttribute="leading" secondItem="QwU-GC-9OQ" secondAttribute="leadingMargin" id="OLv-Eh-Xd1"/>
+                                                        <constraint firstItem="4nb-oD-Cn8" firstAttribute="centerX" secondItem="QwU-GC-9OQ" secondAttribute="centerX" id="eAX-PG-dtg"/>
+                                                        <constraint firstItem="GL6-A0-adV" firstAttribute="top" secondItem="4nb-oD-Cn8" secondAttribute="bottom" constant="15" id="okl-2L-ENl"/>
+                                                        <constraint firstItem="4nb-oD-Cn8" firstAttribute="centerY" secondItem="QwU-GC-9OQ" secondAttribute="centerY" multiplier="0.6" id="peI-B0-a9p"/>
+                                                    </constraints>
+                                                </collectionViewCell>
+                                            </cells>
+                                        </collectionView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ZoN-SX-eCk" firstAttribute="top" secondItem="Wha-Nc-EaY" secondAttribute="bottom" constant="10" id="8sm-Db-96x"/>
+                                        <constraint firstItem="Wha-Nc-EaY" firstAttribute="top" secondItem="uLU-1P-Jem" secondAttribute="top" constant="5" id="BGk-hk-KuM"/>
+                                        <constraint firstItem="Wha-Nc-EaY" firstAttribute="leading" secondItem="uLU-1P-Jem" secondAttribute="leading" constant="10" id="Hwm-Sb-Gm5"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="ZoN-SX-eCk" secondAttribute="trailing" id="T5V-x1-ZaV"/>
+                                        <constraint firstAttribute="trailing" secondItem="Wha-Nc-EaY" secondAttribute="trailing" constant="10" id="Vss-WY-kMM"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="ZoN-SX-eCk" secondAttribute="bottom" id="gFs-zQ-xwG"/>
+                                        <constraint firstItem="ZoN-SX-eCk" firstAttribute="leading" secondItem="uLU-1P-Jem" secondAttribute="leadingMargin" id="rdS-Ym-EAG"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="deps" rowHeight="210" id="hcO-ou-hAV" customClass="DepsTableViewCell" customModule="Elo7_iOS" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="228" width="375" height="210"/>
+                                <rect key="frame" x="0.0" y="549" width="375" height="210"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hcO-ou-hAV" id="jZQ-2a-zx7">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="210"/>
@@ -170,6 +259,7 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="1000"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qyp-zi-NgJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -196,6 +286,7 @@
     </scenes>
     <resources>
         <image name="arrow" width="20" height="12"/>
+        <image name="criatividade" width="225" height="225"/>
         <image name="heroshot" width="640" height="500"/>
         <image name="ic-engenharia" width="50" height="51"/>
         <image name="logo" width="104" height="39"/>
