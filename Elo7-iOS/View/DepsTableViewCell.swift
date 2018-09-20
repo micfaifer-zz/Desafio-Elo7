@@ -13,11 +13,9 @@ protocol UpdateCellTableHeightDelegate: class {
 }
 
 class DepsTableViewCell: UITableViewCell {
-    var indexPath: IndexPath?
-
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var depsCollectionView: UICollectionView!
-    @IBOutlet weak var depCollectionHeightConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var depCollectionHeightConstraint: NSLayoutConstraint!
 
     weak var updateHeightDelegate: UpdateCellTableHeightDelegate?
 
@@ -41,14 +39,13 @@ class DepsTableViewCell: UITableViewCell {
         depsCollectionView.delegate = dataSourceDelegate
         depsCollectionView.dataSource = dataSourceDelegate
         depsCollectionView.tag = row
-//        depsCollectionView.reloadData()
 
         depsCollectionView.reloadData()
         depsCollectionView.performBatchUpdates(nil, completion: {
             (result) in
             if self.depsCollectionView.contentSize.height > 100 {
                 self.depCollectionHeightConstraint.constant = self.depsCollectionView.contentSize.height
-                self.updateHeightDelegate?.updateHeight(at: self.indexPath ?? IndexPath.init())
+                self.updateHeightDelegate?.updateHeight(at: IndexPath.init(row: self.depsCollectionView.tag, section: 0))
             }
         })
     }

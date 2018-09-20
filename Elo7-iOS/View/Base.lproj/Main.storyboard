@@ -28,7 +28,7 @@
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heroshot" translatesAutoresizingMaskIntoConstraints="NO" id="fiq-eB-G69">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" secondItem="fiq-eB-G69" secondAttribute="height" multiplier="15:8" id="D9M-ww-kQT"/>
+                                                <constraint firstAttribute="height" secondItem="fiq-eB-G69" secondAttribute="width" multiplier="8:15" id="ThB-xa-zri"/>
                                             </constraints>
                                         </imageView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="3Nv-Rk-IWw">
@@ -60,42 +60,41 @@
                                         <constraint firstItem="fiq-eB-G69" firstAttribute="top" secondItem="4u0-3R-Ouq" secondAttribute="top" id="4Do-IQ-fPi"/>
                                         <constraint firstItem="3Nv-Rk-IWw" firstAttribute="width" secondItem="fiq-eB-G69" secondAttribute="width" multiplier="0.7" id="GDy-YM-eFh"/>
                                         <constraint firstAttribute="bottom" secondItem="fiq-eB-G69" secondAttribute="bottom" id="Iti-kq-Mhv"/>
-                                        <constraint firstItem="fiq-eB-G69" firstAttribute="leading" secondItem="4u0-3R-Ouq" secondAttribute="leading" id="Wlp-Zq-1eo"/>
-                                        <constraint firstItem="fiq-eB-G69" firstAttribute="width" secondItem="4u0-3R-Ouq" secondAttribute="width" id="aIk-67-ev1"/>
+                                        <constraint firstItem="fiq-eB-G69" firstAttribute="width" secondItem="4u0-3R-Ouq" secondAttribute="width" id="S7M-Ri-SR0"/>
                                         <constraint firstItem="3Nv-Rk-IWw" firstAttribute="centerX" secondItem="4u0-3R-Ouq" secondAttribute="centerX" id="d1s-ZS-rfb"/>
                                         <constraint firstItem="3Nv-Rk-IWw" firstAttribute="height" secondItem="fiq-eB-G69" secondAttribute="height" multiplier="0.7" id="gMn-ut-KH6"/>
-                                        <constraint firstAttribute="trailing" secondItem="fiq-eB-G69" secondAttribute="trailing" id="lKy-qg-gLc"/>
+                                        <constraint firstItem="fiq-eB-G69" firstAttribute="centerX" secondItem="4u0-3R-Ouq" secondAttribute="centerX" id="unZ-V8-nht"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="depsTextField" destination="Ua8-ZQ-ClO" id="pC0-UR-ApR"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="deps" rowHeight="244" id="hcO-ou-hAV" customClass="DepsTableViewCell" customModule="Elo7_iOS" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="228" width="375" height="244"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="deps" rowHeight="210" id="hcO-ou-hAV" customClass="DepsTableViewCell" customModule="Elo7_iOS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="228" width="375" height="210"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hcO-ou-hAV" id="jZQ-2a-zx7">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="244"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hcO-ou-hAV" id="jZQ-2a-zx7">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="210"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5qv-sE-CwZ">
-                                            <rect key="frame" x="16" y="46" width="343" height="30"/>
+                                            <rect key="frame" x="16" y="43" width="343" height="156"/>
                                             <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="30" id="UTb-qe-JVc"/>
+                                                <constraint firstAttribute="height" constant="156" id="UTb-qe-JVc"/>
                                             </constraints>
                                             <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="j9h-Ai-rG4">
-                                                <size key="itemSize" width="165" height="147"/>
+                                                <size key="itemSize" width="165" height="156"/>
                                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                 <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                 <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                             </collectionViewFlowLayout>
                                             <cells>
                                                 <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="depCell" id="4LF-CG-BTa" customClass="DepartmentCollectionViewCell" customModule="Elo7_iOS" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="165" height="147"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="165" height="156"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                                        <rect key="frame" x="0.0" y="0.0" width="165" height="147"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="165" height="156"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" image="ic-engenharia" translatesAutoresizingMaskIntoConstraints="NO" id="1ct-Uo-tZr">
@@ -129,10 +128,7 @@
                                             </cells>
                                         </collectionView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Conheça Nossas Áreas" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="swK-av-bd4">
-                                            <rect key="frame" x="16" y="16" width="343" height="20"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="20" id="bpX-Sx-yPJ"/>
-                                            </constraints>
+                                            <rect key="frame" x="16" y="16" width="343" height="17"/>
                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>

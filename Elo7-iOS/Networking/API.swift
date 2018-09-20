@@ -10,5 +10,5 @@ import Foundation
 
 struct CareerAPI {
     //url de json mock para o projetinho
-    static let url = "https://api.myjson.com/bins/okm38"
+    static let url = "https://api.myjson.com/bins/1dtucc"
 }

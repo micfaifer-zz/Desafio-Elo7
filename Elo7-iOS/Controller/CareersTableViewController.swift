@@ -13,7 +13,6 @@ class CareersTableViewController: UITableViewController {
 
     let chooseDepCellIdentifier = "chooseDep"
     let depsCellIdentifier = "deps"
-
     let depCellIdentifier = "depCell"
 
     var departments: DepartmentsInfos? {
@@ -26,10 +25,6 @@ class CareersTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.tableView.estimatedRowHeight = UITableViewAutomaticDimension
-        self.tableView.rowHeight = UITableViewAutomaticDimension
-
         getCareerPage()
     }
 
@@ -61,7 +56,6 @@ class CareersTableViewController: UITableViewController {
             cell.setCollectionViewDataSourceDelegate(dataSourceDelegate: self, forRow: indexPath.row)
 
             cell.updateHeightDelegate = self
-            cell.indexPath = indexPath
             return cell
         }
     }
@@ -74,7 +68,7 @@ extension CareersTableViewController: UpdateCellTableHeightDelegate {
     }
 }
 
-// MARK: - Table view data source
+// MARK: - Collection view data source e delegates
 extension CareersTableViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return departments?.departments.count ?? 0
@@ -93,15 +87,9 @@ extension CareersTableViewController: UICollectionViewDataSource, UICollectionVi
         let width = collectionView.bounds.width/2.0 - 10
         return CGSize(width: width, height: width)
     }
-
-//    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-//        if let cell = self.tableView.cellForRow(at: IndexPath.init(row: collectionView.tag, section: 0)) as? DepsTableViewCell {
-//             cell.depCollectionHeightConstraint.constant = collectionView.contentSize.height
-//            self.tableView.reloadRows(at: [IndexPath.init(item: collectionView.tag, section: 0)], with: UITableViewRowAnimation.none)
-//        }
-//    }
 }
 
+// MARK: - Picker view data source e delegates
 extension CareersTableViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
