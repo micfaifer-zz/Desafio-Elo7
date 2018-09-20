@@ -9,8 +9,18 @@
 import UIKit
 
 class CareersTableViewController: UITableViewController {
+    let service = Service()
+
     let chooseDepCellIdentifier = "chooseDep"
     let depsCellIdentifier = "deps"
+
+    var departments: DepartmentsInfos? {
+        didSet {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,10 +28,17 @@ class CareersTableViewController: UITableViewController {
         self.tableView.estimatedRowHeight = 200.0
         self.tableView.rowHeight = UITableViewAutomaticDimension
 
+        getCareerPage()
+    }
 
-        let service = Service()
+    func getCareerPage() {
         service.fetchCareerHome { (result) in
-            
+            switch(result) {
+            case Result.failure(let error):
+                print(error.localizedDescription)
+            case Result.success(let result):
+                self.departments = result.departmentsInfos
+            }
         }
     }
     
@@ -33,12 +50,20 @@ class CareersTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             let cell = self.tableView.dequeueReusableCell(withIdentifier: chooseDepCellIdentifier) as! ChooseDepTableViewCell
+            if let departments = departments?.departments {
+                cell.departments = departments
+            }
+
             return cell
         } else {
             let cell = self.tableView.dequeueReusableCell(withIdentifier: depsCellIdentifier) as! DepsTableViewCell
 
             cell.updateHeightDelegate = self
             cell.indexPath = indexPath
+
+            if let departments = departments?.departments {
+                cell.departments = departments
+            }
             return cell
         }
     }

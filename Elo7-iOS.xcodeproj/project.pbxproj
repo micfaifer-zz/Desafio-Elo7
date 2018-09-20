@@ -17,6 +17,7 @@
 		953977442154172600DF981D /* CareerResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953977432154172600DF981D /* CareerResult.swift */; };
 		953977462154173F00DF981D /* DepartmentsInfos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953977452154173F00DF981D /* DepartmentsInfos.swift */; };
 		95397748215417E000DF981D /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95397747215417E000DF981D /* API.swift */; };
+		9539774A21541F7500DF981D /* Careers.json in Resources */ = {isa = PBXBuildFile; fileRef = 9539774921541F7500DF981D /* Careers.json */; };
 		95D58CC3215004CD00FC5033 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D58CC2215004CD00FC5033 /* AppDelegate.swift */; };
 		95D58CC8215004CD00FC5033 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95D58CC6215004CD00FC5033 /* Main.storyboard */; };
 		95D58CCB215004CE00FC5033 /* Elo7_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 95D58CC9215004CD00FC5033 /* Elo7_iOS.xcdatamodeld */; };
@@ -55,6 +56,7 @@
 		953977432154172600DF981D /* CareerResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerResult.swift; sourceTree = "<group>"; };
 		953977452154173F00DF981D /* DepartmentsInfos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentsInfos.swift; sourceTree = "<group>"; };
 		95397747215417E000DF981D /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		9539774921541F7500DF981D /* Careers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Careers.json; sourceTree = "<group>"; };
 		95D58CBF215004CD00FC5033 /* Elo7-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Elo7-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95D58CC2215004CD00FC5033 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95D58CC7215004CD00FC5033 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -100,8 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				953977342152D3B100DF981D /* ChooseDepTableViewCell.swift */,
-				9539772C2152B29200DF981D /* DepartmentCollectionViewCell.swift */,
 				953977362152D3DD00DF981D /* DepsTableViewCell.swift */,
+				9539772C2152B29200DF981D /* DepartmentCollectionViewCell.swift */,
 				95D58CC6215004CD00FC5033 /* Main.storyboard */,
 			);
 			path = View;
@@ -127,6 +129,7 @@
 		9539773B2153519000DF981D /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				9539774921541F7500DF981D /* Careers.json */,
 				9539772A2152866600DF981D /* DesignableTextField.swift */,
 			);
 			path = Util;
@@ -303,6 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				95D58CD0215004D000FC5033 /* LaunchScreen.storyboard in Resources */,
+				9539774A21541F7500DF981D /* Careers.json in Resources */,
 				95D58CCD215004D000FC5033 /* Assets.xcassets in Resources */,
 				95D58CC8215004CD00FC5033 /* Main.storyboard in Resources */,
 			);

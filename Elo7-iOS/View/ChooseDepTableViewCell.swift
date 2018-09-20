@@ -10,9 +10,9 @@ import UIKit
 
 class ChooseDepTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var depsTextField: DesignableUITextField!
+    @IBOutlet private weak var depsTextField: DesignableUITextField!
 
-    let departments = [String](arrayLiteral: "Engenharia", "Comunicação")
+    var departments:[Department] = []
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -57,10 +57,10 @@ extension ChooseDepTableViewCell: UIPickerViewDelegate, UIPickerViewDataSource {
     }
 
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return departments[row]
+        return departments[row].name
     }
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        self.depsTextField.text = self.departments[row]
+        self.depsTextField.text = self.departments[row].name
     }
 }

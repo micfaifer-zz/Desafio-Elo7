@@ -71,18 +71,18 @@
                                     <outlet property="depsTextField" destination="Ua8-ZQ-ClO" id="pC0-UR-ApR"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="deps" rowHeight="112" id="hcO-ou-hAV" customClass="DepsTableViewCell" customModule="Elo7_iOS" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="228" width="375" height="112"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="deps" rowHeight="244" id="hcO-ou-hAV" customClass="DepsTableViewCell" customModule="Elo7_iOS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="228" width="375" height="244"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hcO-ou-hAV" id="jZQ-2a-zx7">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="112"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="244"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5qv-sE-CwZ">
-                                            <rect key="frame" x="16" y="46" width="343" height="46"/>
+                                            <rect key="frame" x="16" y="46" width="343" height="30"/>
                                             <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="46" id="UTb-qe-JVc"/>
+                                                <constraint firstAttribute="height" constant="30" id="UTb-qe-JVc"/>
                                             </constraints>
                                             <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="j9h-Ai-rG4">
                                                 <size key="itemSize" width="165" height="147"/>
