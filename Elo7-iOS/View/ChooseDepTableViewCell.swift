@@ -12,7 +12,7 @@ class ChooseDepTableViewCell: UITableViewCell {
 
     @IBOutlet private weak var depsTextField: DesignableUITextField!
 
-    var departments:[Department] = []
+    private let dataPicker = UIPickerView()
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,10 +24,7 @@ class ChooseDepTableViewCell: UITableViewCell {
     }
 
     func setupDepartmentTextField() {
-        let dataPicker = UIPickerView()
         let toolbar = UIToolbar()
-        dataPicker.delegate = self
-        dataPicker.dataSource = self
 
         let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(self.doneClick))
         let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
@@ -39,28 +36,27 @@ class ChooseDepTableViewCell: UITableViewCell {
         depsTextField.inputView = dataPicker
     }
 
+    func updateDepsTextField(with title: String?) {
+        DispatchQueue.main.async {
+            self.depsTextField.text = title
+        }
+    }
+
     @objc func doneClick() {
         depsTextField.resignFirstResponder()
     }
+
     @objc func cancelClick() {
         depsTextField.resignFirstResponder()
     }
-}
 
-extension ChooseDepTableViewCell: UIPickerViewDelegate, UIPickerViewDataSource {
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
+    func setUIPickerViewDataSourceDelegate
+        <D: UIPickerViewDelegate & UIPickerViewDataSource>
+        (dataSourceDelegate: D, forRow row: Int) {
 
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return departments.count
-    }
-
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return departments[row].name
-    }
-
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        self.depsTextField.text = self.departments[row].name
+        dataPicker.delegate = dataSourceDelegate
+        dataPicker.dataSource = dataSourceDelegate
+        dataPicker.tag = row
+        dataPicker.reloadAllComponents()
     }
 }
