@@ -12,7 +12,6 @@
 		953977352152D3B100DF981D /* ChooseDepTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953977342152D3B100DF981D /* ChooseDepTableViewCell.swift */; };
 		953977372152D3DD00DF981D /* DepsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953977362152D3DD00DF981D /* DepsTableViewCell.swift */; };
 		95D58CC3215004CD00FC5033 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D58CC2215004CD00FC5033 /* AppDelegate.swift */; };
-		95D58CC5215004CD00FC5033 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D58CC4215004CD00FC5033 /* ViewController.swift */; };
 		95D58CC8215004CD00FC5033 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95D58CC6215004CD00FC5033 /* Main.storyboard */; };
 		95D58CCB215004CE00FC5033 /* Elo7_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 95D58CC9215004CD00FC5033 /* Elo7_iOS.xcdatamodeld */; };
 		95D58CCD215004D000FC5033 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95D58CCC215004D000FC5033 /* Assets.xcassets */; };
@@ -46,7 +45,6 @@
 		953977362152D3DD00DF981D /* DepsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepsTableViewCell.swift; sourceTree = "<group>"; };
 		95D58CBF215004CD00FC5033 /* Elo7-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Elo7-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95D58CC2215004CD00FC5033 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		95D58CC4215004CD00FC5033 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		95D58CC7215004CD00FC5033 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		95D58CCA215004CD00FC5033 /* Elo7_iOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Elo7_iOS.xcdatamodel; sourceTree = "<group>"; };
 		95D58CCC215004D000FC5033 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -86,6 +84,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		953977382152F54F00DF981D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				953977342152D3B100DF981D /* ChooseDepTableViewCell.swift */,
+				9539772C2152B29200DF981D /* DepartmentCollectionViewCell.swift */,
+				953977362152D3DD00DF981D /* DepsTableViewCell.swift */,
+				95D58CC6215004CD00FC5033 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		953977392152F55F00DF981D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				95D58CFF215161FC00FC5033 /* CareersTableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9539773A2152F56600DF981D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9539773B2153519000DF981D /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				9539772A2152866600DF981D /* DesignableTextField.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		95D58CB6215004CD00FC5033 = {
 			isa = PBXGroup;
 			children = (
@@ -110,17 +142,14 @@
 			isa = PBXGroup;
 			children = (
 				95D58CC2215004CD00FC5033 /* AppDelegate.swift */,
-				95D58CC4215004CD00FC5033 /* ViewController.swift */,
-				95D58CC6215004CD00FC5033 /* Main.storyboard */,
-				953977362152D3DD00DF981D /* DepsTableViewCell.swift */,
-				9539772C2152B29200DF981D /* DepartmentCollectionViewCell.swift */,
-				95D58CFF215161FC00FC5033 /* CareersTableViewController.swift */,
 				95D58CCC215004D000FC5033 /* Assets.xcassets */,
-				95D58CCE215004D000FC5033 /* LaunchScreen.storyboard */,
-				95D58CD1215004D000FC5033 /* Info.plist */,
+				953977392152F55F00DF981D /* Controller */,
+				9539773A2152F56600DF981D /* Model */,
+				9539773B2153519000DF981D /* Util */,
+				953977382152F54F00DF981D /* View */,
 				95D58CC9215004CD00FC5033 /* Elo7_iOS.xcdatamodeld */,
-				9539772A2152866600DF981D /* DesignableTextField.swift */,
-				953977342152D3B100DF981D /* ChooseDepTableViewCell.swift */,
+				95D58CD1215004D000FC5033 /* Info.plist */,
+				95D58CCE215004D000FC5033 /* LaunchScreen.storyboard */,
 			);
 			path = "Elo7-iOS";
 			sourceTree = "<group>";
@@ -277,7 +306,6 @@
 				9539772D2152B29200DF981D /* DepartmentCollectionViewCell.swift in Sources */,
 				953977372152D3DD00DF981D /* DepsTableViewCell.swift in Sources */,
 				953977352152D3B100DF981D /* ChooseDepTableViewCell.swift in Sources */,
-				95D58CC5215004CD00FC5033 /* ViewController.swift in Sources */,
 				95D58CCB215004CE00FC5033 /* Elo7_iOS.xcdatamodeld in Sources */,
 				9539772B2152866600DF981D /* DesignableTextField.swift in Sources */,
 				95D58D00215161FC00FC5033 /* CareersTableViewController.swift in Sources */,
