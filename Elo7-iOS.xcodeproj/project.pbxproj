@@ -11,6 +11,12 @@
 		9539772D2152B29200DF981D /* DepartmentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9539772C2152B29200DF981D /* DepartmentCollectionViewCell.swift */; };
 		953977352152D3B100DF981D /* ChooseDepTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953977342152D3B100DF981D /* ChooseDepTableViewCell.swift */; };
 		953977372152D3DD00DF981D /* DepsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953977362152D3DD00DF981D /* DepsTableViewCell.swift */; };
+		9539773D2153547900DF981D /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9539773C2153547900DF981D /* Service.swift */; };
+		953977402154164700DF981D /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9539773F2154164700DF981D /* APIError.swift */; };
+		953977422154166000DF981D /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953977412154166000DF981D /* Result.swift */; };
+		953977442154172600DF981D /* CareerResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953977432154172600DF981D /* CareerResult.swift */; };
+		953977462154173F00DF981D /* DepartmentsInfos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953977452154173F00DF981D /* DepartmentsInfos.swift */; };
+		95397748215417E000DF981D /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95397747215417E000DF981D /* API.swift */; };
 		95D58CC3215004CD00FC5033 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D58CC2215004CD00FC5033 /* AppDelegate.swift */; };
 		95D58CC8215004CD00FC5033 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95D58CC6215004CD00FC5033 /* Main.storyboard */; };
 		95D58CCB215004CE00FC5033 /* Elo7_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 95D58CC9215004CD00FC5033 /* Elo7_iOS.xcdatamodeld */; };
@@ -43,6 +49,12 @@
 		9539772C2152B29200DF981D /* DepartmentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentCollectionViewCell.swift; sourceTree = "<group>"; };
 		953977342152D3B100DF981D /* ChooseDepTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseDepTableViewCell.swift; sourceTree = "<group>"; };
 		953977362152D3DD00DF981D /* DepsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepsTableViewCell.swift; sourceTree = "<group>"; };
+		9539773C2153547900DF981D /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		9539773F2154164700DF981D /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		953977412154166000DF981D /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		953977432154172600DF981D /* CareerResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerResult.swift; sourceTree = "<group>"; };
+		953977452154173F00DF981D /* DepartmentsInfos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentsInfos.swift; sourceTree = "<group>"; };
+		95397747215417E000DF981D /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		95D58CBF215004CD00FC5033 /* Elo7-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Elo7-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95D58CC2215004CD00FC5033 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95D58CC7215004CD00FC5033 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -106,6 +118,8 @@
 		9539773A2152F56600DF981D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				953977432154172600DF981D /* CareerResult.swift */,
+				953977452154173F00DF981D /* DepartmentsInfos.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -116,6 +130,17 @@
 				9539772A2152866600DF981D /* DesignableTextField.swift */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		9539773E2153548000DF981D /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				9539773C2153547900DF981D /* Service.swift */,
+				9539773F2154164700DF981D /* APIError.swift */,
+				953977412154166000DF981D /* Result.swift */,
+				95397747215417E000DF981D /* API.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		95D58CB6215004CD00FC5033 = {
@@ -146,6 +171,7 @@
 				953977392152F55F00DF981D /* Controller */,
 				9539773A2152F56600DF981D /* Model */,
 				9539773B2153519000DF981D /* Util */,
+				9539773E2153548000DF981D /* Networking */,
 				953977382152F54F00DF981D /* View */,
 				95D58CC9215004CD00FC5033 /* Elo7_iOS.xcdatamodeld */,
 				95D58CD1215004D000FC5033 /* Info.plist */,
@@ -303,13 +329,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				953977442154172600DF981D /* CareerResult.swift in Sources */,
 				9539772D2152B29200DF981D /* DepartmentCollectionViewCell.swift in Sources */,
+				9539773D2153547900DF981D /* Service.swift in Sources */,
 				953977372152D3DD00DF981D /* DepsTableViewCell.swift in Sources */,
 				953977352152D3B100DF981D /* ChooseDepTableViewCell.swift in Sources */,
 				95D58CCB215004CE00FC5033 /* Elo7_iOS.xcdatamodeld in Sources */,
 				9539772B2152866600DF981D /* DesignableTextField.swift in Sources */,
+				953977462154173F00DF981D /* DepartmentsInfos.swift in Sources */,
+				95397748215417E000DF981D /* API.swift in Sources */,
+				953977422154166000DF981D /* Result.swift in Sources */,
 				95D58D00215161FC00FC5033 /* CareersTableViewController.swift in Sources */,
 				95D58CC3215004CD00FC5033 /* AppDelegate.swift in Sources */,
+				953977402154164700DF981D /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

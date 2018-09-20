@@ -17,6 +17,12 @@ class CareersTableViewController: UITableViewController {
 
         self.tableView.estimatedRowHeight = 200.0
         self.tableView.rowHeight = UITableViewAutomaticDimension
+
+
+        let service = Service()
+        service.fetchCareerHome { (result) in
+            
+        }
     }
     
     // MARK: - Table view data source
