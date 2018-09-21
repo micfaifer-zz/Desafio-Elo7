@@ -14,13 +14,16 @@ class Service {
     func fetchCareerHome(completion: @escaping careerPageResult) {
         if let url = URL(string: CareerAPI.url) {
             URLSession.shared.dataTask(with: url) { (data, response, error) in
+                if let error = error, error._code == NSURLErrorNotConnectedToInternet  {
+                    return completion(Result.failure(APIError.noConnection))
+                }
                 if let data = data, let response = response as? HTTPURLResponse, response.statusCode == 200 {
                     do {
                         let jsonDecoder = JSONDecoder()
                         let result = try jsonDecoder.decode(CareerPageResult.self, from: data)
-                        completion(Result.success(result))
+                        return completion(Result.success(result))
                     } catch {
-                        completion(Result.failure(APIError.jsonParsingFailure))
+                        return completion(Result.failure(APIError.jsonParsingFailure))
                     }
                 }
             }.resume()

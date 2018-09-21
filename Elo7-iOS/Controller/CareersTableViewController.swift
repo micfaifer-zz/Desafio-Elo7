@@ -22,27 +22,56 @@ class CareersTableViewController: UITableViewController {
     let cultureItemCellIdentifier = "cultureItemCell"
     let socialMediaItemCellIdentifier = "socialItemCell"
 
+    var activityIndicatorView: UIActivityIndicatorView!
+
     var careerPage: CareerPageResult? {
         didSet {
             self.tableView.reloadData()
         }
     }
 
+    private let refresher = UIRefreshControl()
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        setActivityIndicator()
         getCareerPage()
+        setRefreshControl()
+    }
+
+    func setRefreshControl() {
+        if #available(iOS 10.0, *) {
+            tableView.refreshControl = refresher
+        } else {
+            tableView.addSubview(refresher)
+        }
+
+        self.refresher.addTarget(self, action: #selector(handleRefresh), for: UIControlEvents.valueChanged)
+        refreshControl?.tintColor = #colorLiteral(red: 0.4901960784, green: 0.4705882353, blue: 0.4549019608, alpha: 1)
+        let attributes = [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.4901960784, green: 0.4705882353, blue: 0.4549019608, alpha: 1)]
+        refresher.attributedTitle = NSAttributedString(string: "Fetching Career Page ...", attributes: attributes)
+    }
+
+    func setActivityIndicator() {
+        activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
+        activityIndicatorView.color = #colorLiteral(red: 0.4901960784, green: 0.4705882353, blue: 0.4549019608, alpha: 1)
+        activityIndicatorView.hidesWhenStopped = true
+        self.tableView.backgroundView = activityIndicatorView
     }
 
     func getCareerPage() {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        self.activityIndicatorView.startAnimating()
         service.fetchCareerHome { (result) in
             DispatchQueue.main.async {
                 UIApplication.shared.isNetworkActivityIndicatorVisible = false
+                self.activityIndicatorView.stopAnimating()
+                self.refresher.endRefreshing()
             }
             switch(result) {
             case Result.failure(let error):
                 DispatchQueue.main.async {
-                    print(error.localizedDescription)
+                    self.alert(message: error.localizedDescription)
                 }
             case Result.success(let result):
                 DispatchQueue.main.async {
@@ -51,9 +80,16 @@ class CareersTableViewController: UITableViewController {
             }
         }
     }
-    
+
+    @objc func handleRefresh() {
+        getCareerPage()
+    }
+
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if careerPage == nil {
+            return 0
+        }
         return 4
     }
 
@@ -142,7 +178,7 @@ extension CareersTableViewController: UICollectionViewDataSource, UICollectionVi
 
         // departamentos
         } else if collectionView.tag == 2 {
-            let width = (collectionView.bounds.width/2.0) - 10
+            let width = (collectionView.bounds.width/2.0) - 5
             return CGSize(width: width, height: width)
 
         // social
