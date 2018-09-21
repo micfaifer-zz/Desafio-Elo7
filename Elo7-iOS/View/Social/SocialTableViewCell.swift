@@ -36,12 +36,7 @@ class SocialTableViewCell: UITableViewCell {
         socialCollectionView.tag = row
 
         socialCollectionView.reloadData()
-        socialCollectionView.performBatchUpdates(nil, completion: {
-            (result) in
-            if self.socialCollectionView.contentSize.height > 40 {
-                self.socialCollectionHeightConstraint.constant = self.socialCollectionView.contentSize.height
-//                self.updateHeightDelegate?.updateHeight(at: IndexPath.init(row: self.depsCollectionView.tag, section: 0))
-            }
-        })
+        self.layoutIfNeeded()
+        self.socialCollectionHeightConstraint.constant = self.socialCollectionView.contentSize.height
     }
 }

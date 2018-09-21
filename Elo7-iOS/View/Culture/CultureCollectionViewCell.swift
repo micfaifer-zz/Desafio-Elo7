@@ -9,6 +9,7 @@
 import UIKit
 
 class CultureCollectionViewCell: UICollectionViewCell {
+    static let cultureItemCellIdentifier = "cultureItemCell"
     
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var tittleLabel: UILabel!

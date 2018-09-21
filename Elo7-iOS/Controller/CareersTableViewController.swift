@@ -24,9 +24,7 @@ class CareersTableViewController: UITableViewController {
 
     var careerPage: CareerPageResult? {
         didSet {
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
+            self.tableView.reloadData()
         }
     }
 
@@ -36,12 +34,20 @@ class CareersTableViewController: UITableViewController {
     }
 
     func getCareerPage() {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
         service.fetchCareerHome { (result) in
+            DispatchQueue.main.async {
+                UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            }
             switch(result) {
             case Result.failure(let error):
-                print(error.localizedDescription)
+                DispatchQueue.main.async {
+                    print(error.localizedDescription)
+                }
             case Result.success(let result):
-                self.careerPage = result
+                DispatchQueue.main.async {
+                    self.careerPage = result
+                }
             }
         }
     }
@@ -56,6 +62,7 @@ class CareersTableViewController: UITableViewController {
         if indexPath.row == 0 {
             let cell = self.tableView.dequeueReusableCell(withIdentifier: chooseDepCellIdentifier) as! ChooseDepTableViewCell
             cell.setUIPickerViewDataSourceDelegate(dataSourceDelegate: self, forRow: indexPath.row)
+            cell.layoutIfNeeded()
             return cell
 
         // cultura
@@ -68,22 +75,16 @@ class CareersTableViewController: UITableViewController {
         } else if indexPath.row == 2 {
             let cell = self.tableView.dequeueReusableCell(withIdentifier: depsCellIdentifier) as! DepsTableViewCell
             cell.setCollectionViewDataSourceDelegate(dataSourceDelegate: self, forRow: indexPath.row)
-            cell.updateHeightDelegate = self
             return cell
 
         // social
-        }else if indexPath.row == 3 {
+        } else if indexPath.row == 3 {
             let cell = self.tableView.dequeueReusableCell(withIdentifier: socialCellIdentifier) as! SocialTableViewCell
             cell.setCollectionViewDataSourceDelegate(dataSourceDelegate: self, forRow: indexPath.row)
             return cell
         }
 
         return UITableViewCell()
-    }
-}
-
-extension CareersTableViewController: UpdateCellTableHeightDelegate {
-    func updateHeight(at indexPath: IndexPath) {
     }
 }
 
@@ -105,7 +106,6 @@ extension CareersTableViewController: UICollectionViewDataSource, UICollectionVi
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-
         // cultura
         if collectionView.tag == 1 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cultureItemCellIdentifier, for: indexPath) as! CultureCollectionViewCell
@@ -121,7 +121,6 @@ extension CareersTableViewController: UICollectionViewDataSource, UICollectionVi
 
             cell.depIconImageView.image = UIImage(named: careerPage?.departmentsInfos.departments[indexPath.row].iconName ?? "")
             cell.titleLabel.text = careerPage?.departmentsInfos.departments[indexPath.row].name
-            cell.layoutIfNeeded()
             return cell
 
         // social
@@ -143,7 +142,7 @@ extension CareersTableViewController: UICollectionViewDataSource, UICollectionVi
 
         // departamentos
         } else if collectionView.tag == 2 {
-            let width = (collectionView.bounds.width/2.0) - 20
+            let width = (collectionView.bounds.width/2.0) - 10
             return CGSize(width: width, height: width)
 
         // social

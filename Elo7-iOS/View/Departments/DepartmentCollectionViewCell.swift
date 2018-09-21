@@ -9,6 +9,8 @@
 import UIKit
 
 class DepartmentCollectionViewCell: UICollectionViewCell {
+    static let depCellIdentifier = "depCell"
+    
     @IBOutlet weak var depIconImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
 }

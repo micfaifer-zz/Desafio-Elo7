@@ -13,8 +13,6 @@ class DepsTableViewCell: UITableViewCell {
     @IBOutlet private weak var depsCollectionView: UICollectionView!
     @IBOutlet private weak var depCollectionHeightConstraint: NSLayoutConstraint!
 
-    weak var updateHeightDelegate: UpdateCellTableHeightDelegate?
-
     override func awakeFromNib() {
         super.awakeFromNib()
         setupDepartmentCollectionView()
@@ -37,12 +35,9 @@ class DepsTableViewCell: UITableViewCell {
         depsCollectionView.tag = row
 
         depsCollectionView.reloadData()
-        depsCollectionView.performBatchUpdates(nil, completion: {
-            (result) in
-            if self.depsCollectionView.contentSize.height > 100 {
-                self.depCollectionHeightConstraint.constant = self.depsCollectionView.contentSize.height
-                self.updateHeightDelegate?.updateHeight(at: IndexPath.init(row: self.depsCollectionView.tag, section: 0))
-            }
-        })
+
+        self.layoutIfNeeded()
+        self.depCollectionHeightConstraint.constant = self.depsCollectionView.contentSize.height
+
     }
 }

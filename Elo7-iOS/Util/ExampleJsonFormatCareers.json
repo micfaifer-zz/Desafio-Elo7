@@ -1,0 +1,115 @@
+{
+    "socialInfos": {
+        "title": "Cenecte-se Conosco",
+        "description": "",
+        "socialItems": [{
+            "name": "facebook",
+            "iconName": "facebook",
+            "link": ""
+        },
+        {
+            "name": "instagram",
+            "iconName": "instagram",
+            "link": ""
+        },
+        {
+            "name": "googleplus",
+            "iconName": "googleplus",
+            "link": ""
+        },
+        {
+            "name": "pinterest",
+            "iconName": "pinterest",
+            "link": ""
+        },
+        {
+            "name": "twitter",
+            "iconName": "twitter",
+            "link": ""
+        },
+        {
+            "name": "linkedin",
+            "iconName": "linkedin",
+            "link": ""
+        },
+        {
+            "name": "blog",
+            "iconName": "blog",
+            "link": ""
+        }]
+    },
+    "cultureInfos": {
+        "title": "Nossa Cultura",
+        "description": "Somos orientados pela satisfação e fidelização de nossos clientes",
+        "cultureItems": [
+            {
+                "name": "Criatividade",
+                "iconName": "criatividade",
+                "description": "Estimulamos a intervenção humana como algo insubstituível. Nosso ambiente é inspirador"
+            },
+            {
+                "name": "Colaboração",
+                "iconName": "colaboracao",
+                "description": "Valorizamos o trabalho em equipe e as habilidade individuais. Incentivamos o empreendedorismo e formamos um time fora de série"
+            },
+            {
+                "name": "Tecnologia e Inovação",
+                "iconName": "tec-ino",
+                "description": "Utilizamos a tecnologia para melhorar continuamente nosso negócio. Transformamos e conectamos pessoas"
+            }
+        ]
+    },
+    "departmentsInfos": {
+        "title": "Conheça nossas áreas",
+        "departments": [
+            {
+                "name": "Engenharia",
+                "iconName": "ic-engenharia",
+                "description": "",
+                "videoLink": ""
+            },
+            {
+                "name": "Atendimento",
+                "iconName": "ic-atendimento",
+                "description": "",
+                "videoLink": ""
+            },
+            {
+                "name": "Comunicação & Marketing",
+                "iconName": "ic-comunicacao-mkt",
+                "description": "",
+                "videoLink": ""
+            },
+            {
+                "name": "Desenvolvimento de Valores",
+                "iconName": "ic-desenvolvimento-vendedores",
+                "description": "",
+                "videoLink": ""
+            },
+            {
+                "name": "Design",
+                "iconName": "ic-design",
+                "description": "",
+                "videoLink": ""
+            },
+            {
+                "name": "Produto",
+                "iconName": "ic-produto",
+                "description": "",
+                "videoLink": ""
+            },
+            {
+                "name": "Trust & Safety",
+                "iconName": "ic-trustnsafety",
+                "description": "",
+                "videoLink": ""
+            },
+            {
+                "name": "Administrativo/ Financeiro",
+                "iconName": "ic-adm-financeiro",
+                "description": "",
+                "videoLink": ""
+            }
+        ]
+    }
+}

@@ -14,8 +14,6 @@ class CultureTableViewCell: UITableViewCell {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var cultureCollectionView: UICollectionView!
     @IBOutlet weak var cultureCollectionHeightConstraint: NSLayoutConstraint!
-
-    weak var updateHeightDelegate: UpdateCellTableHeightDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -36,12 +34,7 @@ class CultureTableViewCell: UITableViewCell {
         cultureCollectionView.tag = row
 
         cultureCollectionView.reloadData()
-        cultureCollectionView.performBatchUpdates(nil, completion: {
-            (result) in
-            if self.cultureCollectionView.contentSize.height > 100 {
-                self.cultureCollectionHeightConstraint.constant = self.cultureCollectionView.contentSize.height
-                self.updateHeightDelegate?.updateHeight(at: IndexPath.init(row: self.cultureCollectionView.tag, section: 0))
-            }
-        })
+        self.layoutIfNeeded()
+        self.cultureCollectionHeightConstraint.constant = self.cultureCollectionView.contentSize.height
     }
 }
