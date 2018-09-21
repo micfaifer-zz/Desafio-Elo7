@@ -15,10 +15,12 @@ class CareersTableViewController: UITableViewController {
     let chooseDepCellIdentifier = "chooseDep"
     let depsCellIdentifier = "deps"
     let cultureCellIdentifier = "cultureCell"
+    let socialCellIdentifier = "socialCell"
 
     //collection view indentifiers
     let depCellIdentifier = "depCell"
     let cultureItemCellIdentifier = "cultureItemCell"
+    let socialMediaItemCellIdentifier = "socialItemCell"
 
     var careerPage: CareerPageResult? {
         didSet {
@@ -46,46 +48,65 @@ class CareersTableViewController: UITableViewController {
     
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 4
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // escolha departamento
         if indexPath.row == 0 {
             let cell = self.tableView.dequeueReusableCell(withIdentifier: chooseDepCellIdentifier) as! ChooseDepTableViewCell
             cell.setUIPickerViewDataSourceDelegate(dataSourceDelegate: self, forRow: indexPath.row)
             return cell
+
+        // cultura
         } else if indexPath.row == 1 {
             let cell = self.tableView.dequeueReusableCell(withIdentifier: cultureCellIdentifier) as! CultureTableViewCell
             cell.setCollectionViewDataSourceDelegate(dataSourceDelegate: self, forRow: indexPath.row)
             return cell
-        } else {
+
+        // departamentos
+        } else if indexPath.row == 2 {
             let cell = self.tableView.dequeueReusableCell(withIdentifier: depsCellIdentifier) as! DepsTableViewCell
             cell.setCollectionViewDataSourceDelegate(dataSourceDelegate: self, forRow: indexPath.row)
             cell.updateHeightDelegate = self
             return cell
+
+        // social
+        }else if indexPath.row == 3 {
+            let cell = self.tableView.dequeueReusableCell(withIdentifier: socialCellIdentifier) as! SocialTableViewCell
+            cell.setCollectionViewDataSourceDelegate(dataSourceDelegate: self, forRow: indexPath.row)
+            return cell
         }
+
+        return UITableViewCell()
     }
 }
 
 extension CareersTableViewController: UpdateCellTableHeightDelegate {
     func updateHeight(at indexPath: IndexPath) {
-//        self.tableView.beginUpdates()
-//        self.tableView.endUpdates()
-//        self.tableView.layer.removeAllAnimations()
     }
 }
 
 // MARK: - Collection view data source e delegates
 extension CareersTableViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        // departamentos
         if collectionView.tag == 1 {
             return careerPage?.cultureInfos.cultureItems.count ?? 0
-        } else {
+        // cultura
+        } else if collectionView.tag == 2 {
             return careerPage?.departmentsInfos.departments.count ?? 0
+        // social
+        } else if collectionView.tag == 3 {
+            return careerPage?.socialInfos.socialItems.count ?? 0
+        } else {
+            return 0
         }
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+
+        // cultura
         if collectionView.tag == 1 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cultureItemCellIdentifier, for: indexPath) as! CultureCollectionViewCell
 
@@ -93,24 +114,44 @@ extension CareersTableViewController: UICollectionViewDataSource, UICollectionVi
             cell.tittleLabel.text = careerPage?.cultureInfos.cultureItems[indexPath.row].name
             cell.descriptionLabel.text = careerPage?.cultureInfos.cultureItems[indexPath.row].description
             return cell
-        } else {
+
+        // departamentos
+        } else if collectionView.tag == 2 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: depCellIdentifier, for: indexPath) as! DepartmentCollectionViewCell
 
             cell.depIconImageView.image = UIImage(named: careerPage?.departmentsInfos.departments[indexPath.row].iconName ?? "")
             cell.titleLabel.text = careerPage?.departmentsInfos.departments[indexPath.row].name
             cell.layoutIfNeeded()
             return cell
+
+        // social
+        } else if collectionView.tag == 3 {
+         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: socialMediaItemCellIdentifier, for: indexPath) as! SocialMediaCollectionViewCell
+            cell.iconImage.image =  UIImage(named: careerPage?.socialInfos.socialItems[indexPath.row].iconName ?? "")
+            return cell
         }
+
+        return UICollectionViewCell()
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+
+        // cultura
         if collectionView.tag == 1 {
             let width = collectionView.bounds.width * 0.9
             return CGSize(width: width, height: width)
-        } else {
-            let width = collectionView.bounds.width/2.0 - 10
+
+        // departamentos
+        } else if collectionView.tag == 2 {
+            let width = (collectionView.bounds.width/2.0) - 20
+            return CGSize(width: width, height: width)
+
+        // social
+        } else if collectionView.tag == 3 {
+            let width = (collectionView.bounds.width/CGFloat(careerPage?.socialInfos.socialItems.count ?? 1))
             return CGSize(width: width, height: width)
         }
+        return CGSize.zero
     }
 }
 

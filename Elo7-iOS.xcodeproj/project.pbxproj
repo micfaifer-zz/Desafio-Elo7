@@ -22,6 +22,9 @@
 		9539774E21545D8F00DF981D /* UpdateHeightDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9539774D21545D8F00DF981D /* UpdateHeightDelegate.swift */; };
 		953977502154629500DF981D /* CultureCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9539774F2154629500DF981D /* CultureCollectionViewCell.swift */; };
 		953977522154721500DF981D /* CultureInfos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953977512154721500DF981D /* CultureInfos.swift */; };
+		953977562154831800DF981D /* SocialTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953977552154831800DF981D /* SocialTableViewCell.swift */; };
+		953977582154833300DF981D /* SocialMediaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953977572154833300DF981D /* SocialMediaCollectionViewCell.swift */; };
+		9539775E2155510600DF981D /* SocialInfos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9539775D2155510600DF981D /* SocialInfos.swift */; };
 		95D58CC3215004CD00FC5033 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D58CC2215004CD00FC5033 /* AppDelegate.swift */; };
 		95D58CC8215004CD00FC5033 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95D58CC6215004CD00FC5033 /* Main.storyboard */; };
 		95D58CCB215004CE00FC5033 /* Elo7_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 95D58CC9215004CD00FC5033 /* Elo7_iOS.xcdatamodeld */; };
@@ -65,6 +68,9 @@
 		9539774D21545D8F00DF981D /* UpdateHeightDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateHeightDelegate.swift; sourceTree = "<group>"; };
 		9539774F2154629500DF981D /* CultureCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CultureCollectionViewCell.swift; sourceTree = "<group>"; };
 		953977512154721500DF981D /* CultureInfos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CultureInfos.swift; sourceTree = "<group>"; };
+		953977552154831800DF981D /* SocialTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialTableViewCell.swift; sourceTree = "<group>"; };
+		953977572154833300DF981D /* SocialMediaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialMediaCollectionViewCell.swift; sourceTree = "<group>"; };
+		9539775D2155510600DF981D /* SocialInfos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialInfos.swift; sourceTree = "<group>"; };
 		95D58CBF215004CD00FC5033 /* Elo7-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Elo7-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95D58CC2215004CD00FC5033 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95D58CC7215004CD00FC5033 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -109,12 +115,11 @@
 		953977382152F54F00DF981D /* View */ = {
 			isa = PBXGroup;
 			children = (
-				953977342152D3B100DF981D /* ChooseDepTableViewCell.swift */,
-				9539774B21545C3C00DF981D /* CultureTableViewCell.swift */,
-				9539772C2152B29200DF981D /* DepartmentCollectionViewCell.swift */,
-				953977362152D3DD00DF981D /* DepsTableViewCell.swift */,
+				9539775C2154896A00DF981D /* Departments */,
+				9539775B215488E000DF981D /* ChooseDepartment */,
+				9539775A215488D900DF981D /* Social */,
+				95397759215488CE00DF981D /* Culture */,
 				95D58CC6215004CD00FC5033 /* Main.storyboard */,
-				9539774F2154629500DF981D /* CultureCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -133,6 +138,7 @@
 				953977432154172600DF981D /* CareerResult.swift */,
 				953977452154173F00DF981D /* DepartmentsInfos.swift */,
 				953977512154721500DF981D /* CultureInfos.swift */,
+				9539775D2155510600DF981D /* SocialInfos.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -156,6 +162,41 @@
 				95397747215417E000DF981D /* API.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		95397759215488CE00DF981D /* Culture */ = {
+			isa = PBXGroup;
+			children = (
+				9539774F2154629500DF981D /* CultureCollectionViewCell.swift */,
+				9539774B21545C3C00DF981D /* CultureTableViewCell.swift */,
+			);
+			path = Culture;
+			sourceTree = "<group>";
+		};
+		9539775A215488D900DF981D /* Social */ = {
+			isa = PBXGroup;
+			children = (
+				953977572154833300DF981D /* SocialMediaCollectionViewCell.swift */,
+				953977552154831800DF981D /* SocialTableViewCell.swift */,
+			);
+			path = Social;
+			sourceTree = "<group>";
+		};
+		9539775B215488E000DF981D /* ChooseDepartment */ = {
+			isa = PBXGroup;
+			children = (
+				953977342152D3B100DF981D /* ChooseDepTableViewCell.swift */,
+			);
+			path = ChooseDepartment;
+			sourceTree = "<group>";
+		};
+		9539775C2154896A00DF981D /* Departments */ = {
+			isa = PBXGroup;
+			children = (
+				953977362152D3DD00DF981D /* DepsTableViewCell.swift */,
+				9539772C2152B29200DF981D /* DepartmentCollectionViewCell.swift */,
+			);
+			path = Departments;
 			sourceTree = "<group>";
 		};
 		95D58CB6215004CD00FC5033 = {
@@ -347,6 +388,7 @@
 			files = (
 				953977442154172600DF981D /* CareerResult.swift in Sources */,
 				9539772D2152B29200DF981D /* DepartmentCollectionViewCell.swift in Sources */,
+				9539775E2155510600DF981D /* SocialInfos.swift in Sources */,
 				9539773D2153547900DF981D /* Service.swift in Sources */,
 				9539774E21545D8F00DF981D /* UpdateHeightDelegate.swift in Sources */,
 				953977372152D3DD00DF981D /* DepsTableViewCell.swift in Sources */,
@@ -361,6 +403,8 @@
 				953977422154166000DF981D /* Result.swift in Sources */,
 				95D58D00215161FC00FC5033 /* CareersTableViewController.swift in Sources */,
 				95D58CC3215004CD00FC5033 /* AppDelegate.swift in Sources */,
+				953977582154833300DF981D /* SocialMediaCollectionViewCell.swift in Sources */,
+				953977562154831800DF981D /* SocialTableViewCell.swift in Sources */,
 				953977402154164700DF981D /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
