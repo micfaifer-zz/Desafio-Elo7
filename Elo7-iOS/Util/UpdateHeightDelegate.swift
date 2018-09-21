@@ -1,5 +1,5 @@
 //
-//  API.swift
+//  UpdateHeightDelegate.swift
 //  Elo7-iOS
 //
 //  Created by lugia on 20/09/18.
@@ -8,7 +8,6 @@
 
 import Foundation
 
-struct CareerAPI {
-    //url de json mock para o projetinho
-    static let url = "https://api.myjson.com/bins/cmhis"
+protocol UpdateCellTableHeightDelegate: class {
+    func updateHeight (at _: IndexPath)
 }

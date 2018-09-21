@@ -12,5 +12,6 @@ import Foundation
 import Foundation
 
 struct CareerPageResult: Codable {
+    let cultureInfos: CultureInfos
     let departmentsInfos: DepartmentsInfos
 }

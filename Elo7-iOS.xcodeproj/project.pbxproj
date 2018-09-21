@@ -18,6 +18,10 @@
 		953977462154173F00DF981D /* DepartmentsInfos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953977452154173F00DF981D /* DepartmentsInfos.swift */; };
 		95397748215417E000DF981D /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95397747215417E000DF981D /* API.swift */; };
 		9539774A21541F7500DF981D /* Careers.json in Resources */ = {isa = PBXBuildFile; fileRef = 9539774921541F7500DF981D /* Careers.json */; };
+		9539774C21545C3C00DF981D /* CultureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9539774B21545C3C00DF981D /* CultureTableViewCell.swift */; };
+		9539774E21545D8F00DF981D /* UpdateHeightDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9539774D21545D8F00DF981D /* UpdateHeightDelegate.swift */; };
+		953977502154629500DF981D /* CultureCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9539774F2154629500DF981D /* CultureCollectionViewCell.swift */; };
+		953977522154721500DF981D /* CultureInfos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953977512154721500DF981D /* CultureInfos.swift */; };
 		95D58CC3215004CD00FC5033 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D58CC2215004CD00FC5033 /* AppDelegate.swift */; };
 		95D58CC8215004CD00FC5033 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95D58CC6215004CD00FC5033 /* Main.storyboard */; };
 		95D58CCB215004CE00FC5033 /* Elo7_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 95D58CC9215004CD00FC5033 /* Elo7_iOS.xcdatamodeld */; };
@@ -57,6 +61,10 @@
 		953977452154173F00DF981D /* DepartmentsInfos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentsInfos.swift; sourceTree = "<group>"; };
 		95397747215417E000DF981D /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		9539774921541F7500DF981D /* Careers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Careers.json; sourceTree = "<group>"; };
+		9539774B21545C3C00DF981D /* CultureTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CultureTableViewCell.swift; sourceTree = "<group>"; };
+		9539774D21545D8F00DF981D /* UpdateHeightDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateHeightDelegate.swift; sourceTree = "<group>"; };
+		9539774F2154629500DF981D /* CultureCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CultureCollectionViewCell.swift; sourceTree = "<group>"; };
+		953977512154721500DF981D /* CultureInfos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CultureInfos.swift; sourceTree = "<group>"; };
 		95D58CBF215004CD00FC5033 /* Elo7-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Elo7-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95D58CC2215004CD00FC5033 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95D58CC7215004CD00FC5033 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -102,9 +110,11 @@
 			isa = PBXGroup;
 			children = (
 				953977342152D3B100DF981D /* ChooseDepTableViewCell.swift */,
-				953977362152D3DD00DF981D /* DepsTableViewCell.swift */,
+				9539774B21545C3C00DF981D /* CultureTableViewCell.swift */,
 				9539772C2152B29200DF981D /* DepartmentCollectionViewCell.swift */,
+				953977362152D3DD00DF981D /* DepsTableViewCell.swift */,
 				95D58CC6215004CD00FC5033 /* Main.storyboard */,
+				9539774F2154629500DF981D /* CultureCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -122,6 +132,7 @@
 			children = (
 				953977432154172600DF981D /* CareerResult.swift */,
 				953977452154173F00DF981D /* DepartmentsInfos.swift */,
+				953977512154721500DF981D /* CultureInfos.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -131,6 +142,7 @@
 			children = (
 				9539774921541F7500DF981D /* Careers.json */,
 				9539772A2152866600DF981D /* DesignableTextField.swift */,
+				9539774D21545D8F00DF981D /* UpdateHeightDelegate.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -336,11 +348,15 @@
 				953977442154172600DF981D /* CareerResult.swift in Sources */,
 				9539772D2152B29200DF981D /* DepartmentCollectionViewCell.swift in Sources */,
 				9539773D2153547900DF981D /* Service.swift in Sources */,
+				9539774E21545D8F00DF981D /* UpdateHeightDelegate.swift in Sources */,
 				953977372152D3DD00DF981D /* DepsTableViewCell.swift in Sources */,
+				953977502154629500DF981D /* CultureCollectionViewCell.swift in Sources */,
+				953977522154721500DF981D /* CultureInfos.swift in Sources */,
 				953977352152D3B100DF981D /* ChooseDepTableViewCell.swift in Sources */,
 				95D58CCB215004CE00FC5033 /* Elo7_iOS.xcdatamodeld in Sources */,
 				9539772B2152866600DF981D /* DesignableTextField.swift in Sources */,
 				953977462154173F00DF981D /* DepartmentsInfos.swift in Sources */,
+				9539774C21545C3C00DF981D /* CultureTableViewCell.swift in Sources */,
 				95397748215417E000DF981D /* API.swift in Sources */,
 				953977422154166000DF981D /* Result.swift in Sources */,
 				95D58D00215161FC00FC5033 /* CareersTableViewController.swift in Sources */,

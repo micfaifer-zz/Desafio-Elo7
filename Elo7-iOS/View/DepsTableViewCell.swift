@@ -8,10 +8,6 @@
 
 import UIKit
 
-protocol UpdateCellTableHeightDelegate: class {
-    func updateHeight (at _: IndexPath)
-}
-
 class DepsTableViewCell: UITableViewCell {
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var depsCollectionView: UICollectionView!
@@ -48,10 +44,5 @@ class DepsTableViewCell: UITableViewCell {
                 self.updateHeightDelegate?.updateHeight(at: IndexPath.init(row: self.depsCollectionView.tag, section: 0))
             }
         })
-    }
-
-    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        self.depCollectionHeightConstraint.constant = self.depsCollectionView.contentSize.height
-        updateHeightDelegate?.updateHeight(at: IndexPath.init(item: self.depsCollectionView.tag, section: 0))
     }
 }
